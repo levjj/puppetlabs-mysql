@@ -287,15 +287,6 @@ class mysql::params {
     }
   }
 
-  case $::operatingsystem {
-    'Ubuntu': {
-      $server_service_provider = upstart
-    }
-    default: {
-      $server_service_provider = undef
-    }
-  }
-
   $default_options = {
     'client'          => {
       'port'          => '3306',
